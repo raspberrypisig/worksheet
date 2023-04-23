@@ -24,3 +24,5 @@ const playwright = require('playwright');
 2. https://github.com/binsarjr/svelte-printpdf
 
 3. A4 size 300dpi 1240*1754 pixels
+
+4. Firefox -> File -> Print -> paper size A3 -> zoom 80%

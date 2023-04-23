@@ -5,7 +5,7 @@
         "value": ""
       },
       {
-        "class": "heading heading_top",
+        "class": "heading heading_top borderleft",
         "value": "8"
       },
       {
@@ -35,7 +35,7 @@
     ],
     [
       {
-        "class": "leftcolumn",
+        "class": "leftcolumn bordertop",
         "value": "-5"
       },
       {

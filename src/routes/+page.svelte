@@ -153,11 +153,19 @@ squids, marine iguanas and red Galalagos crabs</p>
    }
 
    .rowbottom {
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid black !important;
    }
 
    .lastcolumn {
-    border-right: 4px solid black;
+    border-right: 4px solid black !important;
+   }
+
+   .borderleft {
+    border-left: 4px solid black !important;
+   }
+
+   .bordertop {
+    border-top: 4px solid black !important;
    }
 
    .heading{
@@ -178,7 +186,7 @@ squids, marine iguanas and red Galalagos crabs</p>
    }
 
    .leftcolumn {
-    border-left: 2px solid black;
+    border-left: 4px solid black;
     border-right: 2px solid black;
     border-top: 2px solid black;
     border-bottom: 2px solid black;      
@@ -215,6 +223,10 @@ squids, marine iguanas and red Galalagos crabs</p>
 
    .noborder {
     padding-bottom: 50px;
+   }
+
+   .borderleft {
+    border-left: 4px solid black;
    }
 
 </style>
