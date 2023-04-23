@@ -12,17 +12,56 @@
 <p>Almost all types of modern transport could use this invention that is used by 
 squids, marine iguanas and red Galalagos crabs</p>
 
-<h2>CODE TO BREAK</h2>
-<div class="numericanswer" id="numericanswer_row1">
-28 - 35 - 96
-</div>
-<div class="numericanswer" id="numericanswer_row2">
-32 - 64 - 16 - 32 - 112 - 44 - 80 - 20 - 16 - 60
-</div>
+<h2>CODE</h2>
+
+
+<table class="noborder paddingleft">
+  <tr>
+    <td>28</td>
+    <td> 35</td>
+    <td>96</td>
+  </tr>
+  <tr>
+    <td>__</td>
+    <td>__</td>
+    <td>__</td>
+  </tr>
+</table>
+
+
+
+
+<table class="noborder paddingleft">
+  <tr>
+    <td>32</td>
+    <td>64</td>
+    <td>16</td>
+    <td>32</td>
+    <td>112</td>
+    <td>44</td>
+    <td>80</td>
+    <td>20</td>
+    <td>16</td>
+    <td>60</td>        
+  </tr>
+  <tr>
+    <td>__</td>
+    <td>__</td>
+    <td>__</td>
+    <td>__</td>
+    <td>___</td>
+    <td>__</td>
+    <td>__</td>
+    <td>__</td>
+    <td>__</td>
+    <td>__</td>      
+  </tr>
+</table>
+
 
 <h2> LETTER TABLE</h2>
 
-    <table>
+    <table class="lettertable">
      {#each data.conversion_table as row}
       <tr>
       {#each row as cell}
@@ -62,7 +101,7 @@ squids, marine iguanas and red Galalagos crabs</p>
    }
 
 
-   table {
+   .lettertable {
     padding-left: 200px;
 
     border-spacing: 0px;
@@ -77,22 +116,33 @@ squids, marine iguanas and red Galalagos crabs</p>
    }
 
    .topleft {
-    border-left: none;
-    border-top: none;
+    border-left: none !important;
+    border-top: none !important;
    }
 
-   tr {
+   .heading_top {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;    
+   }
+
+
+
+   .lettertable  tr {
     padding: 0
    }
 
-   td {
+   .lettertable td {
     /*text-align: center;*/
     font-size: 32px;
     padding: 20px;
+    /*
     border-left: 2px solid black;
     border-right: 2px solid black;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    */
    }
 
    .leftcolumn {
@@ -118,6 +168,53 @@ squids, marine iguanas and red Galalagos crabs</p>
 
    .numericanswer_row2 {
     padding-bottom: 120px;
+   }
+
+   .letter {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;    
+   }
+
+   .leftcolumn {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;      
+   }
+
+   .noborder td {
+    border: 0px solid black;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-size: 32px;
+   }
+
+   .paddingleft {
+    padding-left: 120px;
+   }
+
+   /*
+   .normaltable {
+    display: block;
+    
+   }
+   */
+
+   /*
+   .noborder > td {
+    padding-left: 30px;
+   }
+   */
+
+   .noborder td:nth-child(1) {
+    padding-left: 0px;
+   }
+
+   .noborder {
+    padding-bottom: 50px;
    }
 
 </style>
