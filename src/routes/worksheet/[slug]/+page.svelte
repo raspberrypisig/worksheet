@@ -5,6 +5,37 @@
 
     export let data;
 
+    let clue = data.what_is_it[parseInt(data.slug) - 1].definition;
+    let answer =  data.what_is_it[parseInt(data.slug) - 1].word;
+    let letters_table = data.letters_table;
+
+    let is_two_word_answer = answer.includes(" ");
+    let answer_line1 = [];
+    let answer_line2 = [];
+
+    if (is_two_word_answer) {
+      const answer_firstline = answer.split(" ")[0];
+      const answer_secondline = answer.split(" ")[1];
+      answer_line1 = get_code(answer_firstline);
+      answer_line2 = get_code(answer_secondline);
+      console.log(answer_line1);
+      console.log(answer_line2);
+    }
+
+    else {
+      answer_line1 = get_code(answer);
+      console.log(answer_line1);
+    }
+    
+    function get_code(line: string) {
+      let result: number[] = []
+      for (let c of line) {
+        const l = letters_table[c];
+        result.push(l);
+      }
+      return result;
+    }
+
     function getRandomInt(max: number) {
       return Math.floor(Math.random() * max);
     }
@@ -39,8 +70,7 @@
   <h1>What is it?</h1>
   
   <h2>CLUE</h2>
-  <p>Almost all types of modern transport could use this invention that is used by 
-  squids, marine iguanas and red Galalagos crabs</p>
+  <p>{clue}</p>
   
   <h2> LETTER TABLE</h2>
   
@@ -58,7 +88,8 @@
   
       <h2>CODE</h2>
   
-  
+
+      
       <table class="noborder paddingleft">
         <tr>
           <td>28</td>
