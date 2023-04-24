@@ -41,9 +41,21 @@ h2 {
         color-adjust: exact !important;  /*Firefox*/
     }
 
+    #buttons {
+        display: none;
+    }
+
     body {
      zoom: 80%;
    
     }
     
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
 }
