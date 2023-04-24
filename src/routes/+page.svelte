@@ -12,53 +12,6 @@
 <p>Almost all types of modern transport could use this invention that is used by 
 squids, marine iguanas and red Galalagos crabs</p>
 
-<h2>CODE</h2>
-
-
-<table class="noborder paddingleft">
-  <tr>
-    <td>28</td>
-    <td> 35</td>
-    <td>96</td>
-  </tr>
-  <tr>
-    <td>__</td>
-    <td>__</td>
-    <td>__</td>
-  </tr>
-</table>
-
-
-
-
-<table class="noborder paddingleft">
-  <tr>
-    <td>32</td>
-    <td>64</td>
-    <td>16</td>
-    <td>32</td>
-    <td>112</td>
-    <td>44</td>
-    <td>80</td>
-    <td>20</td>
-    <td>16</td>
-    <td>60</td>        
-  </tr>
-  <tr>
-    <td>__</td>
-    <td>__</td>
-    <td>__</td>
-    <td>__</td>
-    <td>___</td>
-    <td>__</td>
-    <td>__</td>
-    <td>__</td>
-    <td>__</td>
-    <td>__</td>      
-  </tr>
-</table>
-
-
 <h2> LETTER TABLE</h2>
 
     <table class="lettertable">
@@ -71,13 +24,55 @@ squids, marine iguanas and red Galalagos crabs</p>
       {/each}
       </tr>
      {/each}
-
-
-
     </table>
 
+    <h2>CODE</h2>
 
+
+    <table class="noborder paddingleft">
+      <tr>
+        <td>28</td>
+        <td> 35</td>
+        <td>96</td>
+      </tr>
+      <tr>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+      </tr>
+    </table>
+        
+    <table class="noborder paddingleft">
+      <tr>
+        <td>32</td>
+        <td>64</td>
+        <td>16</td>
+        <td>32</td>
+        <td>112</td>
+        <td>44</td>
+        <td>80</td>
+        <td>20</td>
+        <td>16</td>
+        <td>60</td>        
+      </tr>
+      <tr>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>___</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>      
+      </tr>
+    </table>
+    
+
+    
 <div class="filler">&nbsp;</div>
+    
 
 <style>
     p {

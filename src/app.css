@@ -20,18 +20,30 @@ h2 {
     justify-content: left;
     padding-left: 120px;
     font-size: 32px;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 
 
 @media print {
+
+    @page {
+        size: A3;
+        -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+        color-adjust: exact !important;  /*Firefox*/
+        -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+        -moz-color-adjust: exact !important;  /*Firefox*/        
+    }
+
     * {
         -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
         color-adjust: exact !important;  /*Firefox*/
     }
 
-        body {
-          zoom: 80%;
-        }
+    body {
+     zoom: 80%;
+   
+    }
     
 }
