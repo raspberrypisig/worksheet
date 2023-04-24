@@ -5,37 +5,6 @@
 
     export let data;
 
-    let clue = data.what_is_it[parseInt(data.slug) - 1].definition;
-    let answer =  data.what_is_it[parseInt(data.slug) - 1].word;
-    let letters_table = data.letters_table;
-
-    let is_two_word_answer = answer.includes(" ");
-    let answer_line1: {code: number, blank: string}[] = [];
-    let answer_line2: {code: number, blank: string}[] = [];
-
-    if (is_two_word_answer) {
-      const answer_firstline = answer.split(" ")[0];
-      const answer_secondline = answer.split(" ")[1];
-      answer_line1 = get_code(answer_firstline);
-      answer_line2 = get_code(answer_secondline);
-      console.log(answer_line1);
-      console.log(answer_line2);
-    }
-
-    else {
-      answer_line1 = get_code(answer);
-      console.log(answer_line1);
-    }
-    
-    function get_code(line: string): {code: number, blank: string}[] {
-      let result: {code: number, blank: string}[] = []
-      for (let c of line) {
-        const l = letters_table[c];
-        result.push({"code": l, blank: "_".repeat(l.toString().length)});
-      }
-      return result;
-    }
-
     function getRandomInt(max: number) {
       return Math.floor(Math.random() * max);
     }
@@ -56,6 +25,7 @@
       const randomNumber = getRandomInt(100); 
       goto(`/worksheet/${randomNumber}`);  
     }      
+
   </script>
   
   <div id="buttons">
@@ -63,14 +33,17 @@
       <li><button on:click={next}>Next</button></li>
       <li><button on:click={previous}>Previous</button></li>
       <li><button on:click={randomWorksheet}>Random</button></li>
-      <li><input maxlength="5" size="5" value="{data.slug}"></li>
+      <li><input maxlength="5" size="5" bind:value="{data.slug}" on:input={() => goto(`/worksheet/${data.slug}`)}></li>
     </ul>
   </div>
   
   <h1>What is it?</h1>
   
   <h2>CLUE</h2>
-  <p>{clue}</p>
+  
+  <p>{data.clue}</p>
+ 
+  
   
   <h2> LETTER TABLE</h2>
   
@@ -92,44 +65,36 @@
       
       <table class="noborder paddingleft">
         <tr>
-         {#each answer_line1 as d}
+         {#each data.answer_line1 as d}
            <td>{d.code}</td>
          {/each}
+         
         </tr>
-        <tr>
-          {#each answer_line1 as d}
+        
+        <tr>          
+          {#each data.answer_line1 as d}
           <td>{d.blank}</td>
-        {/each}
+          {/each}
         </tr>
+        
       </table>
-          
+
+      {#if data.is_two_word_answer}     
       <table class="noborder paddingleft">
         <tr>
-          <td>32</td>
-          <td>64</td>
-          <td>16</td>
-          <td>32</td>
-          <td>112</td>
-          <td>44</td>
-          <td>80</td>
-          <td>20</td>
-          <td>16</td>
-          <td>60</td>        
-        </tr>
-        <tr>
-          <td>__</td>
-          <td>__</td>
-          <td>__</td>
-          <td>__</td>
-          <td>___</td>
-          <td>__</td>
-          <td>__</td>
-          <td>__</td>
-          <td>__</td>
-          <td>__</td>      
-        </tr>
+          {#each data.answer_line2 as d}
+            <td>{d.code}</td>
+          {/each}
+          
+         </tr>
+         
+         <tr>          
+           {#each data.answer_line2 as d}
+           <td>{d.blank}</td>
+           {/each}
+         </tr>
       </table>
-      
+      {/if}
   
       
   <div class="filler">&nbsp;</div>
