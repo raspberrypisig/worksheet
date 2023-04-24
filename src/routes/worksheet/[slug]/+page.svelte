@@ -10,8 +10,8 @@
     let letters_table = data.letters_table;
 
     let is_two_word_answer = answer.includes(" ");
-    let answer_line1 = [];
-    let answer_line2 = [];
+    let answer_line1: {code: number, blank: string}[] = [];
+    let answer_line2: {code: number, blank: string}[] = [];
 
     if (is_two_word_answer) {
       const answer_firstline = answer.split(" ")[0];
@@ -27,11 +27,11 @@
       console.log(answer_line1);
     }
     
-    function get_code(line: string) {
-      let result: number[] = []
+    function get_code(line: string): {code: number, blank: string}[] {
+      let result: {code: number, blank: string}[] = []
       for (let c of line) {
         const l = letters_table[c];
-        result.push(l);
+        result.push({"code": l, blank: "_".repeat(l.toString().length)});
       }
       return result;
     }
@@ -92,14 +92,14 @@
       
       <table class="noborder paddingleft">
         <tr>
-          <td>28</td>
-          <td> 35</td>
-          <td>96</td>
+         {#each answer_line1 as d}
+           <td>{d.code}</td>
+         {/each}
         </tr>
         <tr>
-          <td>__</td>
-          <td>__</td>
-          <td>__</td>
+          {#each answer_line1 as d}
+          <td>{d.blank}</td>
+        {/each}
         </tr>
       </table>
           
