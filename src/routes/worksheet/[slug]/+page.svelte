@@ -4,9 +4,8 @@
     import { goto } from '$app/navigation';
 
     export let data;
-
     function getRandomInt(max: number) {
-      return Math.floor(Math.random() * max);
+      return Math.floor(Math.random() * max ) + 1;
     }
 
 
@@ -22,7 +21,7 @@
     }  
     
     function randomWorksheet() {
-      const randomNumber = getRandomInt(100); 
+      const randomNumber = getRandomInt(data.total_words_count); 
       goto(`/worksheet/${randomNumber}`);  
     }      
 
@@ -37,7 +36,7 @@
     </ul>
   </div>
   
-  <h1>What is it?</h1>
+  <h1>What is it ?-{data.roman_slug}</h1>
   
   <h2>CLUE</h2>
   
@@ -66,14 +65,14 @@
       <table class="noborder paddingleft">
         <tr>
          {#each data.answer_line1 as d}
-           <td>{d.code}</td>
+           <td>{d}</td>
          {/each}
          
         </tr>
         
         <tr>          
           {#each data.answer_line1 as d}
-          <td>{d.blank}</td>
+          <td>___</td>
           {/each}
         </tr>
         
@@ -83,14 +82,14 @@
       <table class="noborder paddingleft">
         <tr>
           {#each data.answer_line2 as d}
-            <td>{d.code}</td>
+            <td>{d}</td>
           {/each}
           
          </tr>
          
          <tr>          
            {#each data.answer_line2 as d}
-           <td>{d.blank}</td>
+           <td>___</td>
            {/each}
          </tr>
       </table>
@@ -219,6 +218,7 @@
       padding-bottom: 50px;
       font-weight: bold;
       font-size: 32px;
+      width: 3ch;
      }
   
      .paddingleft {

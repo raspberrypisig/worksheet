@@ -12,7 +12,9 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 48px;
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: 0.2ch;
 }
 
 h2 {
@@ -39,15 +41,11 @@ h2 {
     * {
         -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
         color-adjust: exact !important;  /*Firefox*/
+        zoom: 80%;
     }
 
     #buttons {
         display: none;
-    }
-
-    body {
-     zoom: 80%;
-   
     }
     
 }
