@@ -36,7 +36,7 @@
     </ul>
   </div>
   
-  <h1>What is it ?-{data.roman_slug}</h1>
+  <h1>What is it?-{data.roman_slug}</h1>
   
   <h2>CLUE</h2>
   
@@ -140,11 +140,13 @@
       border-top: none !important;
      }
   
-     .heading_top {
+     td.heading_top {
       border-left: 2px solid black;
       border-right: 2px solid black;
       border-top: 2px solid black;
       border-bottom: 2px solid black;    
+      font-weight: bold;
+      font-size: 48px !important;
      }
   
   
@@ -168,6 +170,7 @@
      .leftcolumn {
       border-left: 4px solid black;
       font-weight: bold;
+      font-size: 48px !important;
       letter-spacing: 8px;
       text-align: right;
      }
@@ -198,11 +201,13 @@
       padding-bottom: 120px;
      }
   
-     .letter {
+     td.letter {
       border-left: 2px solid black;
       border-right: 2px solid black;
       border-top: 2px solid black;
       border-bottom: 2px solid black;    
+      font-weight: bold;
+      font-size: 48px;
      }
   
      .leftcolumn {
@@ -217,7 +222,7 @@
       padding-left: 20px;
       padding-bottom: 50px;
       font-weight: bold;
-      font-size: 32px;
+      font-size: 48px;
       width: 3ch;
      }
   

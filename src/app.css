@@ -1,5 +1,5 @@
 body {
-    background-image: url("./images/background.png") !important;
+    background-image: url("./images/background-enlarged.png") !important;
     background-repeat: no-repeat;
     overflow: visible;
     width: 1240;
@@ -22,8 +22,6 @@ h2 {
     justify-content: left;
     padding-left: 120px;
     font-size: 32px;
-    margin-top: 60px;
-    margin-bottom: 50px;
 }
 
 
